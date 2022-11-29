@@ -1,13 +1,14 @@
 function Flights() {
     function calculateNumberOfFlights(a, b){
         if (a % b == 0){
-            a / b == c
+            let c = a / b;
+            return c
         } else if (a % b >= 1){
-            a / b == c++
+            let c = (a - (a % b)) / b
+            return ++c
         };
-        return c;
     }
-   return calculateNumberOfFlights()
-}
-module.exports = Flights();
+   return {calculateNumberOfFlights};
+   module.exports = Flights();
+};
 
