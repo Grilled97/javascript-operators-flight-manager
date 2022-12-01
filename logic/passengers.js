@@ -41,7 +41,7 @@ function Passengers() {
             regularPassengersWithEconomySeats = updateConfiguration(regularEconomyConfiguration, 
                 economySeatsPerFlight);
 
-            return {vipPassengerWithBusinessSeats:vipPassengersWithBusinessSeats,
+            return {vipPassengersWithBusinessSeats:vipPassengersWithBusinessSeats,
             vipPassengersWithEconomySeats:vipPassengersWithEconomySeats,
             regularPassengersWithBusinessSeats:regularPassengersWithBusinessSeats,
             regularPassengersWithEconomySeats:regularPassengersWithEconomySeats};
