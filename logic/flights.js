@@ -6,7 +6,7 @@ function Flights() {
             throw new Error("The number of passengers must be a positive integer value")
         }
 
-        if ((capacity < 0) || (!Number.isInteger(Number(passengers)))) {
+        if ((capacity < 0) || (!Number.isInteger(Number(capacity)))) {
             throw new Error("The capacity of the flight must be a positive integer value")
         }
         
