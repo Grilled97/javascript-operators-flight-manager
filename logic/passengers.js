@@ -16,7 +16,7 @@ function Passengers() {
     }
 
     function distributeAllSeatsToAllPassengers(vipPassengers, regularPassengers, 
-        nrOfFlights, businessSeatsPerFlight, economySeatsPerFlight){
+                                               nrOfFlights, businessSeatsPerFlight, economySeatsPerFlight){
 
             let vipPassengersWithBusinessSeats=0, vipPassengersWithEconomySeats=0,
                 regularPassengersWithBusinessSeats=0, regularPassengersWithEconomySeats=0;
@@ -24,20 +24,22 @@ function Passengers() {
             let availableEconomySeats = nrOfFlights * economySeatsPerFlight;
 
             var vipBusinessConfiguration = {passengers:vipPassengers, seats:availableBusinessSeats};
-            vipPassengersWithBusinessSeats = updateConfiguration(vipBusinessConfiguration, businessSeatsPerFlight);
+            vipPassengersWithBusinessSeats = updateConfiguration(vipBusinessConfiguration, 
+                businessSeatsPerFlight);
 
             var vipEconomyConfiguration = {passengers:vipBusinessConfiguration.passengers,
-            seats:availableEconomySeats};
+                seats:availableEconomySeats};
             vipPassengerWithEconomySeats = updateConfiguration(vipEconomyConfiguration, economySeatsPerFlight);
 
             var regularBusinessConfiguration = {passengers:regularPassengers,
-            seats:vipBusinessConfiguration.seats};
+                seats:vipBusinessConfiguration.seats};
             regularPassengersWithBusinessSeats = updateConfiguration(regularBusinessConfiguration,
                 businessSeatsPerFlight);
 
             var regularEconomyConfiguration = {passengers:regularConfiguration.passengers,
-            seats:vipEconomyConfiguration.seats};
-            regularPassengersWithEconomySeats = updateConfiguration(regularEconomyConfiguration, economySeatsPerFlight);
+                seats:vipEconomyConfiguration.seats};
+            regularPassengersWithEconomySeats = updateConfiguration(regularEconomyConfiguration, 
+                economySeatsPerFlight);
 
             return {vipPassengerWithBusinessSeats:vipPassengersWithBusinessSeats,
             vipPassengersWithEconomySeats:vipPassengersWithEconomySeats,
