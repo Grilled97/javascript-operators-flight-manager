@@ -1,14 +1,18 @@
 function Passengers() {
-    checkFlightCapacity(flightCapacity, passengersArray); {
-        let totalPassengers = passengersArray.reduce(
-            (accumulator, currentValue) => accumulator + currentValue
-            );
-        
-        if (totalPassengers > flightCapacity){
-            return "Error"
-        } else if (totalPassengers < flightCapacity); {
-            return totalPassengers;
+    
+    function checkFlightCapacity(flightCapacity, passengersArray) {
+        let passengersNumber = 0;
+        let passengers;
+
+        for(passengers of passengersArray) {
+            passengersNumber += passengers;
         }
+
+        if (passengersNumber > flightCapacity) {
+            throw new Error("Flight capacity (" + flightCapacity + ") exceeded. You have " passengersNumber " number of passengers")
+        }
+
+        return passengersNumber;
     }
 
     function distributeAllSeatsToAllPassengers(vipPassengers, regularPassengers, 
@@ -56,6 +60,8 @@ function Passengers() {
 
 
     return {checkFlightCapacity, distributeAllSeatsToAllPassengers};
-    module.exports = Passengers();
+    
 }
+
+module.exports = Passengers();
 
