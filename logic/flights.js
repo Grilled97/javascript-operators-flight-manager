@@ -14,8 +14,10 @@ function Flights() {
         if(passengers % capacity == 0) {
             flights = passengers/capacity;
         } else {
-            flights = Math.floor(passengers/capacity) +1;
+            flights = Math.floor(passengers/capacity) + 1;
         }
+
+        return flights;
     }
 
    function checkAircraftRevision(distanceLimit, distancesArray){
