@@ -32,7 +32,7 @@ function Util() {
         }
     }
 
-    function calculateTotalDistance(distanceArray) {
+    function calculateTotalDistance(distancesArray) {
         let totalDistance = 0;
         let distance;
 

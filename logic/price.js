@@ -12,7 +12,7 @@ function Prices() {
         return finalPrice.toFixed(2);
     }
 
-    function calculateDefaultFinalPrice(basePrice, passerType, flightType) {
+    function calculateDefaultFinalPrice(basePrice, passengerType, flightType) {
         let finalPrice = basePrice;
 
         switch(passengerType.toUpperCase()) {
